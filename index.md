@@ -1,7 +1,7 @@
 # Wiki Index
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
-> Last updated: 2026-04-22 | Total pages: 15
+> Last updated: 2026-04-22 | Total pages: 18
 
 ## Research Directions (Concepts)
 - [[test-generation]] — LLM驱动的自动化测试生成，最热门研究方向
@@ -22,6 +22,9 @@
 ## CCF-A Conferences (Entities)
 - [[ASE-2024]] — IEEE/ACM Automated Software Engineering 2024
 - [[ISSTA-2024]] — International Symposium on Software Testing and Analysis 2024
+- [[ICSE-2025]] — ICSE 2025, 渥太华; Multi-Agent论文极少（仅1篇确认）
+- [[FSE-2024]] — FSE 2024, 无Multi-Agent论文（传统SE为主）
+- [[FSE-2025]] — FSE 2025, 论文列表待确认
 
 ## Comparisons
 - [[research-priority-comparison]] — 课题方向优先级对比分析
