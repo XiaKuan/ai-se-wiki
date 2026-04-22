@@ -104,6 +104,138 @@ sources: [ASE-2024, ASE-2025, ICSE-2025, ICSE-2026, FSE-2024, arXiv]
 - 如何处理Agent协作中的错误传播？
 - 多Agent系统中的角色分配和动态转换机制？
 
+## 效果评估方法（Evaluation Methods）
+
+### 论文类型与评估性质
+
+| 论文 | 类型 | 评估性质 |
+|------|------|----------|
+| 2511.08475 (Designing Multi-Agent) | Survey/文献综述 | 质性分析，无实证评估 |
+| 2404.04834 (Vision and Road Ahead) | Survey/系统性综述 | 质性分析 + 案例演示 |
+| 2510.03463 (ALMAS) | Framework proposal | 案例演示，**无量化评估** |
+| 2511.18467 (Shadows) | Security攻击/防御研究 | 量化实验 |
+| 2505.16086 (Optimizing Multi-Agent) | 优化方法研究 | 多维量化实验 |
+| 2512.21818 (Code Injection) | 安全架构研究 | 量化实验 |
+
+### 评估维度分类
+
+#### 1. 任务完成类（最常用）
+
+| 指标 | 论文 | 说明 |
+|------|------|------|
+| **Pass@k** (k=1,10,100) | 2512.21818, 2505.16086 | 代码生成通过率，k次采样至少1次通过 |
+| **Attack Success Rate (ASR)** | 2511.18467, 2512.21818 | 恶意行为达成率（越低越好） |
+| **Benign Utility (BU)** | 2511.18467 | 正常任务完成能力 |
+| **Utility Under Attack (UUA)** | 2511.18467 | 被攻击后正常任务完成能力 |
+| **Reject Rate (RR)** | 2511.18467 | 系统拒绝恶意请求率 |
+| **Accuracy** | 2512.21818 | 架构被攻击后的正确性 |
+
+#### 2. 效率类
+
+| 指标 | 论文 | 说明 |
+|------|------|------|
+| **LLM Call数量** | 2512.21818 | 架构效率（coder: 164 calls, coder-reviewer-tester更多） |
+| Token消耗 | — | 未被明确报告 |
+| 响应时间 | — | 未被明确报告 |
+
+#### 3. 协作质量类（最关键、最空白）
+
+> **2511.08475 (Survey, 94篇论文) 明确指出**：
+> *"lack of objective evaluation metrics for multi-agent collaboration quality"* — 这是multi-agent研究最大挑战
+
+| 论文 | 涉及内容 | 局限 |
+|------|----------|------|
+| 2505.16086 | "Group behavior"分析 | 用文本反馈识别欠佳Agent，但**无统一协作质量指标** |
+| 2511.08475 | 16种设计模式 | Survey发现没有系统性的协作质量量化方法 |
+
+#### 4. 安全性类（仅安全相关论文）
+
+| 指标 | 说明 |
+|------|------|
+| ASR | 攻击成功率，越低越好 |
+| ASR-d | 防御后的攻击成功率 |
+| RR | 系统拒绝恶意请求率 |
+| BU | 正常用户任务的完成质量 |
+| UUA | 被攻击干扰后仍正常工作的能力 |
+
+### 核心结论：是否存在客观量化方法？
+
+**有，但碎片化、无统一标准：**
+
+1. **任务级指标**（Pass@k、Accuracy）— 借用单Agent评估，**无法衡量协作本身**
+2. **安全指标**（ASR/BU/RR）— 只在安全场景有效
+3. **效率指标**（LLM calls）— 只衡量计算成本，不衡量质量
+4. **协作质量指标**— **几乎空白**，是最大研究gap
+
+### 关键研究空白（科研机会）
+
+| Gap | 说明 |
+|-----|------|
+| **无统一协作质量基准** | 如何衡量"两Agent分工协作"优于"单Agent独立完成"？ |
+| **无Role Assignment评估框架** | 不同角色分配对任务完成的影响无法量化对比 |
+| **无Communication Protocol评估** | Agent间通信效率没有客观指标 |
+| **无错误传播评估** | 多Agent中某Agent犯错，如何量化其对最终输出的影响？ |
+| **无动态协作评估** | Agent间动态角色切换无法被现有指标捕捉 |
+
+---
+
+## 使用的数据集
+
+### 数据集汇总
+
+| 数据集 | 论文 | 规模 | 用途 |
+|--------|------|------|------|
+| **HumanEval** | 2512.21818, 2505.16086 | 164道Python编程题 | 代码生成能力评估 |
+| **SWE-bench** | 2510.03463 (计划), 2505.16086 | 数百道真实GitHub issue修复 | 真实软件bug修复 |
+| **SRDD** | 2511.18467, 2505.16086 | 1,200个软件任务prompt，40子类 | Agent驱动的软件开发 |
+| **自定义480测试集** | 2511.18467 | 480个（40×5组合） | 安全攻击评估 |
+| **MMLU / MATH** | 2505.16086 | 标准NLP benchmark | 与传统NLP任务对比 |
+
+### 核心数据集详解
+
+#### HumanEval（最常用）
+- **来源**: Chen et al. (2021) "Evaluating Large Language Models Trained on Code"
+- **规模**: 164道手写Python编程问题
+- **结构**: 函数签名 + docstring + 测试用例
+- **指标**: Pass@1 / Pass@k
+- **Multi-Agent中的表现**: MetaGPT 85.9%, MapCoder(7B) 57.6%, AgentCoder +29.9% vs 单LLM
+- **局限**: 单函数级别代码补全，**无法评估复杂SE任务和多Agent协作**
+
+#### SWE-bench
+- **来源**: 真实GitHub仓库issue修复
+- **特点**: 需要理解代码库结构、定位bug、生成修复
+- **现状**: 很多multi-agent论文**只报告HumanEval**，因为SWE-bench太难
+- **ALMAS (2510.03463)**: 计划使用但**尚未完成评估**
+
+#### SRDD (Software Requirement Description Dataset)
+- **来源**: Qian et al. (2024) — ChatGPT生成
+- **规模**: 1,200个软件任务prompts
+- **分类**: 5大类（education/work/life/game/creation）× 40个子类
+- **意义**: **目前最专门针对agent驱动软件开发**的数据集
+- **2511.18467用法**: 40个子类各选1个benign任务 × 5种恶意软件行为(Trojan/Spyware/Adware/Ransomware/Virus) = 480测试用例
+
+### 数据集使用总体问题
+
+| 问题 | 说明 |
+|------|------|
+| **重代码生成，轻协作** | HumanEval/SWE-bench都是单Agent任务，无法评估Multi-Agent协作 |
+| **缺乏端到端SE数据集** | SRDD最接近，但源自LLM生成（非真实需求） |
+| **缺乏跨任务类型** | 少有需求工程、架构设计、测试生成等SE全生命周期任务 |
+| **评估与真实场景脱节** | 164道编程题 vs 真实SE：需求→设计→实现→测试→部署 |
+| **无标准化协作benchmark** | 没有专门评估multi-agent协作质量的基准 |
+
+### 科研机会
+
+1. **专门评估Multi-Agent协作质量的benchmark** — 不评估单Agent代码生成，而是评估：
+   - Agent间任务分配合理性
+   - 通信协议效率
+   - 错误传播与恢复
+   - Role Assignment的影响
+2. **SRDD可作为构建协作benchmark的基础**（1,200个prompt × 多维度标注）
+3. **端到端SE任务数据集** — 从需求到部署的全流程评估，目前几乎是空白
+
+---
+
 ## 待确认的 arXiv 论文（需在 DBLP 验证 CCF-A 状态）
 
 | arXiv ID | 标题 | 是否CCF-A |

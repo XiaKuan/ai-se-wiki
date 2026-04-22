@@ -20,3 +20,9 @@
 - Pages created: [[ICSE-2025]], [[FSE-2024]], [[FSE-2025]]
 - Index updated: 15→18 pages
 - 待确认: arXiv论文的CCF-A正式发表状态，OOPSLA/SOSP检查
+
+## [2026-04-22] update | Multi-Agent效果评估方法 + 数据集分析
+- Sources: arXiv 2511.08475, 2511.18467, 2505.16086, 2512.21818, 2510.03463, 2404.04834 HTML页面
+- Topics: 评估方法（4类维度）、数据集（HumanEval/SWE-bench/SRDD）、研究空白
+- Pages updated: [[multi-agent-collaboration]] (增加"效果评估方法"和"使用的数据集"两节)
+- Key findings: 协作质量评估几乎空白；HumanEval无法评估协作；SRDD是最接近SE的数据集
