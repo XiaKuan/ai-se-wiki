@@ -151,6 +151,24 @@ AIOps 在 CCF-A 软件工程会议中**论文数量较少**，主要是 ASE 2024
 
 ---
 
+## ICSE 2026 新增论文 (2026年4月更新)
+
+| 论文 | 方向 | 机构 |
+|------|------|------|
+| **SWE-Debate: Competitive Multi-Agent Debate for Software Issue Resolution** | Multi-Agent辩论做Issue解决 | 上海交大 |
+| **Evaluating and Improving Automated Repository-Level Rust Issue Resolution with LLM-based Agents** | LLM Agent自动修复Rust Issue | 南科大 |
+| **Fixing Security Vulnerabilities with Agentic AI in OSS-Fuzz** | Agentic AI修复安全漏洞 | NUS (SEIP) |
+| **More with Less: An Empirical Study of Turn-Control Strategies for Efficient Coding Agents** | 高效Coding Agent策略 | ByteDance |
+
+## 运维Benchmark缺口总结 (2026年4月更新)
+
+| 缺口类型 | 描述 | 研究价值 |
+|----------|------|----------|
+| **Multi-Agent SRE Benchmark** | 评测多智能体协作运维能力 | ⭐⭐⭐⭐⭐ 最高 |
+| **Real-time Incident Dataset** | 实时告警→诊断→修复完整流程 | ⭐⭐⭐⭐⭐ 最高 |
+| **Cross-system Operations** | 跨K8s+DB+Network联合运维 | ⭐⭐⭐⭐ |
+| **Human-in-the-loop Ops** | 人机协作运维决策数据 | ⭐⭐⭐⭐ |
+
 ## 相关方向
 
 - [[multi-agent-collaboration]] — 多 Agent 协作可应用于复杂故障诊断
@@ -158,3 +176,4 @@ AIOps 在 CCF-A 软件工程会议中**论文数量较少**，主要是 ASE 2024
 - [[program-comprehension]] — 日志理解依赖程序理解能力
 - [[aiware-2025]] — AIware 2025 的 Benchmark & Dataset Track 是运维数据集的直接相关资源
 - [[llm-security]] — Agent 在生产环境中的安全保障
+- [[AI-Ops-CCF-A-Research-Survey-2023-2026]] — 完整调研报告
