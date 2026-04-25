@@ -1,10 +1,10 @@
 ---
 title: AIOps & Log Analysis (LLM辅助运维与日志分析)
 created: 2026-04-22
-updated: 2026-04-23
+updated: 2026-04-26
 type: concept
 tags: [aiops, CCF-A, LLM, log-analysis, incident-response, SRE, autonomous-operations, research-trend]
-sources: [ASE-2024, ISSTA-2024, AIware-2025, arXiv:2604.19742, arXiv:2602.13156, arXiv:2602.02585, arXiv:2407.04065, arXiv:2511.15755]
+sources: [ASE-2024, ISSTA-2024, AIware-2025, arXiv:2604.03933, arXiv:2602.13156, arXiv:2602.02585, arXiv:2407.04065, arXiv:2511.15755]
 ---
 
 ## 定义
@@ -46,7 +46,7 @@ AIOps 在 CCF-A 软件工程会议中**论文数量较少**，主要是 ASE 2024
 
 ### 1. Autonomous AI SRE Agent
 
-**arXiv:2604.19742** — *Deploy, Calibrate, Monitor, Heal -- No Human Required: An Autonomous AI SRE Agent for Elasticsearch*
+**arXiv:2604.03933** — *Deploy, Calibrate, Monitor, Heal -- No Human Required: An Autonomous AI SRE Agent for Elasticsearch*
 
 | 属性 | 内容 |
 |------|------|
@@ -64,6 +64,17 @@ AIOps 在 CCF-A 软件工程会议中**论文数量较少**，主要是 ASE 2024
 | **核心贡献** | 端到端 LLM Agent 网络事件响应系统 |
 | **关键技术** | In-context learning + 自主推理 + 工具调用 |
 | **评估** | 在网络故障场景下验证事件响应能力 |
+
+### 2b. Flow-of-Action: SOP Enhanced Multi-Agent RCA
+
+**arXiv:2502.08224** — *Flow-of-Action: SOP Enhanced LLM-Based Multi-Agent System for Root Cause Analysis*
+
+| 属性 | 内容 |
+|------|------|
+| **核心贡献** | SOP约束ReAct幻觉，RCA准确率35%→64% |
+| **关键创新** | SOP-centric框架：SOP生成→SOP转代码→约束LLM行为 |
+| **辅助Agent** | 降噪Agent、空间缩小Agent、停止判断Agent |
+| **作者** | Zhe Xie, Zeyan Li, Dan Pei (清华/字节) |
 
 ### 3. Agentic Observability
 

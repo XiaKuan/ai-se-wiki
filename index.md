@@ -1,7 +1,7 @@
 # Wiki Index
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
-> Last updated: 2026-04-23 | Total pages: 19
+> Last updated: 2026-04-26 | Total pages: 22
 
 ## Research Directions (Concepts)
 - [[test-generation]] — LLM驱动的自动化测试生成，最热门研究方向
@@ -23,9 +23,14 @@
 - [[ASE-2024]] — IEEE/ACM Automated Software Engineering 2024
 - [[ISSTA-2024]] — International Symposium on Software Testing and Analysis 2024
 - [[ICSE-2025]] — ICSE 2025, 渥太华; Multi-Agent论文极少（仅1篇确认）
+- [[ICSE-2026]] — ICSE 2026, 里约热内卢; Multi-Agent论文爆发（7+篇）
 - [[FSE-2024]] — FSE 2024, 无Multi-Agent论文（传统SE为主）
 - [[FSE-2025]] — FSE 2025, 论文列表待确认
 - [[AIware-2025]] — AI-powered Software (ASE 2025 co-located), 含Benchmark&Dataset Track
+- [[AgenticSE-2025]] — LLM Agent SE专项工作坊 (ASE 2025 co-located)
+
+## arXiv论文 (Entities)
+- [[arxiv-aiops-key-papers]] — 核心AI-Ops arXiv论文汇总（ES Guardian Agent, Flow-of-Action, RCAEval等）
 
 ## Comparisons
 - [[research-priority-comparison]] — 课题方向优先级对比分析

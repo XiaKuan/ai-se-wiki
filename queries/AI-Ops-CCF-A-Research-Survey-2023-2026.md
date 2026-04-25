@@ -27,7 +27,7 @@ sources: [ICSE-2025, ICSE-2026, FSE-2024, FSE-2025, ASE-2024, ASE-2025, ISSTA-20
 
 | 会议 | AI-Ops/运维相关论文数 | LLM Agent SRE方向 | 数据集/Benchmark方向 |
 |------|---------------------|-------------------|---------------------|
-| ICSE 2026 | 4+ | 3+ | 1+ |
+| ICSE 2026 | 7+ | 6+ | 2+ |
 | ASE 2025 | 5+ | 3+ | 3+ |
 | FSE 2024/2025 | 3+ | 2+ | 1+ |
 | ISSTA 2024 | 2+ | 1+ | 1+ |
@@ -41,12 +41,15 @@ sources: [ICSE-2025, ICSE-2026, FSE-2024, FSE-2025, ASE-2024, ASE-2025, ISSTA-20
 
 #### ICSE 2026
 
-| 论文 | 方向 | 机构 | 备注 |
+|| 论文 | 方向 | 机构 | 备注 |
 |------|------|------|------|
-| **SWE-Debate: Competitive Multi-Agent Debate for Software Issue Resolution** | Multi-Agent辩论 | 上海交大 | ICSE 2026 Research |
-| **Evaluating and Improving Automated Repository-Level Rust Issue Resolution with LLM-based Agents** | Rust Issue自动修复 | 南科大 | ICSE 2026 Research |
-| **Fixing Security Vulnerabilities with Agentic AI in OSS-Fuzz** | Agentic AI安全 | NUS | ICSE 2026 SEIP |
-| **More with Less: An Empirical Study of Turn-Control Strategies for Efficient Coding Agents** | Coding Agent效率 | ByteDance | ICSE 2026 Research |
+| **Agentic Memory Enhanced Recursive Reasoning for Root Cause Localization** | RCA + Agentic Memory | ICSE 2026 | 最新进展 |
+| **FoundRoot: Towards Foundation Model for Root Cause Analysis** | RCA Foundation Model | 清华/字节 | 结构化深度思考 |
+| **R-Log: Incentivizing Log Analysis Capability in LLMs via RL** | Log分析 + RL | ICSE 2026 | 新研究方向 |
+| **OpenDerisk: An Industrial Framework for AI-Driven SRE** | 工业SRE框架 | ICSE 2026 | 设计与实现 |
+| **SWE-Debate: Competitive Multi-Agent Debate for Issue Resolution** | Multi-Agent辩论 | 上海交大 | ICSE 2026 Research |
+| **Evaluating and Improving Automated Repository-Level Rust Issue Resolution** | Rust Issue Agent | 南科大 | ICSE 2026 Research |
+| **LLM-Based Automated Diagnosis Of Integration Test Failures At Google** | Test诊断 | Google | ICSE 2026 SEIP |
 
 #### ICSE 2025 / 2024
 
@@ -142,7 +145,7 @@ sources: [ICSE-2025, ICSE-2026, FSE-2024, FSE-2025, ASE-2024, ASE-2025, ISSTA-20
 
 | 论文 | arXiv ID | 方向 | 重要性 |
 |------|----------|------|--------|
-| **Deploy, Calibrate, Monitor, Heal -- An Autonomous AI SRE Agent** | 2604.19742 | **全生命周期SRE Agent** | ⭐⭐⭐⭐⭐ 必读 |
+|| **Deploy, Calibrate, Monitor, Heal -- An Autonomous AI SRE Agent** | 2604.03933 | **全生命周期SRE Agent** | ⭐⭐⭐⭐⭐ 必读 |
 | **In-Context Autonomous Network Incident Response** | 2602.13156 | 网络事件响应 | ⭐⭐⭐⭐ |
 | **Multi-Agent LLM Orchestration for Incident Response** | 2511.15755 | 多智能体事件响应 | ⭐⭐⭐⭐ |
 | **Agentic Observability: Automated Alert Triage with LLM-based Multi-Agents** | 2602.02585 | 智能告警分类 | ⭐⭐⭐⭐ |
