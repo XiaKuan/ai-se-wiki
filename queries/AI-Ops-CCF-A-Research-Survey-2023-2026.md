@@ -29,8 +29,9 @@ sources: [ICSE-2025, ICSE-2026, FSE-2024, FSE-2025, ASE-2024, ASE-2025, ISSTA-20
 ||------|---------------------|-------------------|---------------------|------|
 || ICSE 2026 | 11+ | 9+ | 3+ | RCA方向最热，Crash RCA新出现 |
 || ASE 2025 | 11+ | 5+ | 3+ | **Log分析6篇，极为活跃** |
-|| FSE 2024/2025 | 3+ | 2+ | 1+ | 2025论文列表未发布 |
-|| ISSTA 2024 | 2+ | 1+ | 1+ | LogPPT + RCAEval |
+|| FSE 2024 | 15+ | 8+ | 2+ | RCA方向5篇，Cloud Incident Management成规模 |
+|| FSE 2025 | 未知 | 未知 | 未知 | 论文列表未发布 |
+|| ISSTA 2024 | 7+ | 3+ | 3+ | LogPPT + RCAEval |
 || AIware 2025 | 6+ | 4+ | 4+ | Benchmark & Dataset Track |
 
 ---
@@ -94,18 +95,43 @@ sources: [ICSE-2025, ICSE-2026, FSE-2024, FSE-2025, ASE-2024, ASE-2025, ISSTA-20
 
 ### 2.3 FSE (2024-2025)
 
-| 论文 | 方向 | 备注 |
-|------|------|------|
-| **Exploring LLM-based Agents for Root Cause Analysis** | LLM Agent根因分析 | FSE 2024 |
-| **Automated Root Causing of Cloud Incidents using In-Context Learning with GPT-4** | 云事故根因 | FSE 2024 |
-| **Multi-Agent Architectures for Software Engineering: Opportunities and Challenges** | Multi-Agent SE架构 | 2025 |
+#### FSE 2024（来源：researchr.org）
+
+|| 论文 | 方向 | 备注 |
+||------|------|------|
+|| **BARO: Robust Root Cause Analysis for Microservices via Multivariate Bayesian Online Change Point Detection** | RCA + 贝叶斯变点 | 多变量贝叶斯RCA |
+|| **Chain-of-Event: Interpretable Root Cause Analysis for Microservices through Automatically Learning Weighted Event Causal Graph** | RCA + 因果图 | 可解释RCA，因果图自动学习 |
+|| **ChangeRCA: Finding Root Causes from Software Changes in Large Online Systems** | RCA + 代码变更 | 大规模在线系统 |
+|| **LM-PACE: Confidence Estimation by Large Language Models for Effective Root Causing of Cloud Incidents** | Cloud RCA + LLM置信度 | LLM估计置信度提升RCA |
+|| **X-lifecycle Learning for Cloud Incident Management using LLMs** | Cloud Incident Management | LLM全生命周期管理 |
+|| **MonitorAssistant: Simplifying Cloud Service Monitoring via Large Language Models** | Cloud Monitoring + LLM | LLM简化监控 |
+|| **Automated Root Causing of Cloud Incidents using In-Context Learning with GPT-4** | Cloud RCA + GPT-4 | 上下文学习 |
+|| **Exploring LLM-based Agents for Root Cause Analysis** | LLM Agent RCA | FSE 2024 |
+|| **LILAC: Log Parsing using LLMs with Adaptive Parsing Cache** | Log解析 + LLM | 自适应解析缓存 |
+|| **Go Static: Contextualized Logging Statement Generation** | 日志语句生成 | 上下文感知日志生成 |
+|| **LogSD: Detecting Anomalies from System Logs through Self-supervised Learning** | Log异常检测 | 自监督学习 |
+|| **A Critical Review of Common Log Data Sets Used for Evaluation of Sequence-based Anomaly Detection** | Log数据集综述 | 批判性综述 |
+|| **Fault Diagnosis for Test Alarms in Microservices Through Multi-source Data** | 故障诊断 + 多源数据 | 微服务测试告警 |
+|| **Decoding Anomalies! Unraveling Operational Challenges in Human-in-the-Loop Anomaly Validation** | 人机协同异常验证 | 运维实践挑战 |
+|| **ConDefects: A Complementary Dataset for LLM-based Fault Localization and Program Repair** | 数据集 + 缺陷定位 | 数据泄露问题 |
+
+**注**: FSE 2024 RCA方向极为集中（5篇），Cloud Incident Management主题首次成规模出现。
+
+#### FSE 2025
+
+论文列表尚未发布（返回空），无法检索。
 
 ### 2.4 ISSTA (2024)
 
-| 论文 | 方向 | 备注 |
-|------|------|------|
-| **Face It Yourselves: An LLM-Based Two-Stage Strategy to Localize Configuration Errors via Logs** | 日志配置错误定位 | ISSTA 2024 |
-| **LogPPT: Large Language Models as Log Analysts** | 日志分析 | ISSTA 2024 |
+|| 论文 | 方向 | 备注 | 来源 |
+||------|------|------|------|
+|| **LogPPT: Large Language Models as Log Analysts** | Log分析 + LLM | PPT风格日志解析框架 | ISSTA 2024 |
+|| **RCAEval: A Benchmark for Root Cause Analysis of Microservice Systems (735 cases)** | RCA Benchmark | 15个baseline，ISSTA 2024 | ISSTA 2024 |
+|| **Face It Yourselves: An LLM-Based Two-Stage Strategy to Localize Configuration Errors via Logs** | 配置错误定位 + Log | 两阶段策略 | ISSTA 2024 |
+|| **A Large-Scale Evaluation for Log Parsing Techniques: How Far Are We?** | Log解析评测 | 大规模Log解析技术评估 | ISSTA 2024 |
+|| **FastLog: An End-to-End Method to Efficiently Generate and Insert Logging Statements** | 日志生成 | 端到端日志语句生成 | ISSTA 2024 |
+|| **AutoCodeRover: Autonomous Program Improvement** | 自主程序改进 | 自主Agent | ISSTA 2024 |
+|| **Enhancing Multi-agent System Testing with Diversity-Guided Exploration** | Multi-Agent测试 | 多智能体系统测试 | ISSTA 2024 |
 
 ---
 
