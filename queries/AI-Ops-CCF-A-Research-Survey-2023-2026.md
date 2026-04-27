@@ -9,7 +9,7 @@ sources: [ICSE-2025, ICSE-2026, FSE-2024, FSE-2025, ASE-2024, ASE-2025, ISSTA-20
 
 # AI-Ops × LLM Agent 运维科研调研报告 (2023-2026)
 
-> 调研时间: 2026-04-23
+> 调研时间: 2026-04-23 (2026-04-27 更新ASE 2025新增论文)
 > 覆盖会议: ICSE (2023-2026), FSE (2023-2025), ASE (2023-2025), ISSTA (2023-2025), AIware (2024-2025)
 > 核心关键词: AI-Ops, LLM Agent, SRE, Autonomous Operations, Incident Response, Log Analysis, Alert Triage, Benchmark, Dataset
 
@@ -25,13 +25,13 @@ sources: [ICSE-2025, ICSE-2026, FSE-2024, FSE-2025, ASE-2024, ASE-2025, ISSTA-20
 
 ### 1.2 论文分布
 
-| 会议 | AI-Ops/运维相关论文数 | LLM Agent SRE方向 | 数据集/Benchmark方向 |
-|------|---------------------|-------------------|---------------------|
-| ICSE 2026 | 7+ | 6+ | 2+ |
-| ASE 2025 | 5+ | 3+ | 3+ |
-| FSE 2024/2025 | 3+ | 2+ | 1+ |
-| ISSTA 2024 | 2+ | 1+ | 1+ |
-| AIware 2025 | 6+ | 4+ | 4+ |
+|| 会议 | AI-Ops/运维相关论文数 | LLM Agent SRE方向 | 数据集/Benchmark方向 | 备注 |
+||------|---------------------|-------------------|---------------------|------|
+|| ICSE 2026 | 11+ | 9+ | 3+ | RCA方向最热，Crash RCA新出现 |
+|| ASE 2025 | 11+ | 5+ | 3+ | **Log分析6篇，极为活跃** |
+|| FSE 2024/2025 | 3+ | 2+ | 1+ | 2025论文列表未发布 |
+|| ISSTA 2024 | 2+ | 1+ | 1+ | LogPPT + RCAEval |
+|| AIware 2025 | 6+ | 4+ | 4+ | Benchmark & Dataset Track |
 
 ---
 
@@ -41,15 +41,19 @@ sources: [ICSE-2025, ICSE-2026, FSE-2024, FSE-2025, ASE-2024, ASE-2025, ISSTA-20
 
 #### ICSE 2026
 
-|| 论文 | 方向 | 机构 | 备注 |
-|------|------|------|------|
-| **Agentic Memory Enhanced Recursive Reasoning for Root Cause Localization** | RCA + Agentic Memory | ICSE 2026 | 最新进展 |
-| **FoundRoot: Towards Foundation Model for Root Cause Analysis** | RCA Foundation Model | 清华/字节 | 结构化深度思考 |
-| **R-Log: Incentivizing Log Analysis Capability in LLMs via RL** | Log分析 + RL | ICSE 2026 | 新研究方向 |
-| **OpenDerisk: An Industrial Framework for AI-Driven SRE** | 工业SRE框架 | ICSE 2026 | 设计与实现 |
-| **SWE-Debate: Competitive Multi-Agent Debate for Issue Resolution** | Multi-Agent辩论 | 上海交大 | ICSE 2026 Research |
-| **Evaluating and Improving Automated Repository-Level Rust Issue Resolution** | Rust Issue Agent | 南科大 | ICSE 2026 Research |
-| **LLM-Based Automated Diagnosis Of Integration Test Failures At Google** | Test诊断 | Google | ICSE 2026 SEIP |
+||| 论文 | 方向 | 机构 | 备注 | 来源 |
+||------|------|------|------|------|------|
+|| **Agentic Memory Enhanced Recursive Reasoning for Root Cause Localization** | RCA + Agentic Memory | ICSE 2026 | 最新进展 | researchr.org |
+|| **FoundRoot: Towards Foundation Model for Root Cause Analysis** | RCA Foundation Model | 清华/字节 | 结构化深度思考 | researchr.org |
+|| **R-Log: Incentivizing Log Analysis Capability in LLMs via RL** | Log分析 + RL | ICSE 2026 | 新研究方向 | researchr.org |
+|| **OpenDerisk: An Industrial Framework for AI-Driven SRE** | 工业SRE框架 | ICSE 2026 | 设计与实现 | researchr.org |
+|| **TAAF: Trace Abstraction & Analysis Framework Synergizing KG + LLMs** | Trace + 知识图谱 | ICSE 2026 | 知识图谱融合 | researchr.org |
+|| **Finding the Needle in the Crash Stack (AutoCrashFL)** | Crash RCA + 工业级 | ICSE 2026 | 工业规模Crash定位 | researchr.org |
+|| **"Where is My Troubleshooting Procedure?" RAG for Failure Resolution** | RAG + 故障排除 | ICSE 2026 | CPS系统RAG | researchr.org |
+|| **Learning from Change: Predictive Models for Incident Prevention** | 事故预防 + 预测模型 | ICSE 2026 | 监管环境 | researchr.org |
+|| **SWE-Debate: Competitive Multi-Agent Debate for Issue Resolution** | Multi-Agent辩论 | 上海交大 | ICSE 2026 Research | researchr.org |
+|| **Evaluating and Improving Automated Repository-Level Rust Issue Resolution** | Rust Issue Agent | 南科大 | ICSE 2026 Research | researchr.org |
+|| **LLM-Based Automated Diagnosis Of Integration Test Failures At Google** | Test诊断 | Google | ICSE 2026 SEIP | researchr.org |
 
 #### ICSE 2025 / 2024
 
@@ -62,12 +66,21 @@ sources: [ICSE-2025, ICSE-2026, FSE-2024, FSE-2025, ASE-2024, ASE-2025, ISSTA-20
 
 #### ASE 2025
 
-| 论文 | 方向 | 备注 |
-|------|------|------|
-| **Demystifying LLM-based Software Engineering Agents** | SE Agent系统性分析 | AIware 2025 Main Track |
-| **Automatically Maintaining Agent Systems: How Far Are We?** | Agent自动维护 | 重要新方向 |
-| **Teaching LLMs to Debug: Toward Reasoning- and Tool-Aware Coding Agents** | 调试Agent | 推理+工具感知 |
-| **Judge the Votes: A System to Classify Bug Reports and Give Suggestions** | Bug报告分类 | 运维辅助 |
+|| 论文 | 方向 | 备注 | 来源 |
+||------|------|------|------|
+|| **LLM-Powered Multi-Agent Collaboration for Intelligent Industrial On-Call Automation** | 智能运维 + 多Agent | 工业On-Call自动化 | researchr.org |
+|| **United We Stand: Towards End-to-End Log-based Fault Diagnosis via Interactive Multi-Task Learning** | Log故障诊断 + 多任务 | 交互式多任务学习 | researchr.org |
+|| **Improving LLM-based Log Parsing by Learning from Errors in Reasoning Traces** | Log解析 + 反思学习 | 从推理错误中学习 | researchr.org |
+|| **LogAction: Consistent Cross-system Anomaly Detection through Logs via Active Domain Adaptation** | Log异常检测 + 域适应 | 跨系统一致异常检测 | researchr.org |
+|| **Defects4Log: Benchmarking LLMs for Logging Code Defect Detection and Reasoning** | Log代码缺陷检测 + Benchmark | 评测LLM日志缺陷能力 | researchr.org |
+|| **CollaborLog: Efficient-Generalizable Log Anomaly Detection via Large-Small Model Collaboration** | Log异常检测 + 大小模型 | 泛化性+效率 | researchr.org |
+|| **Root Cause Analysis of RISC-V Build Failures via LLM and MCTS Reasoning** | RCA + MCTS | RISC-V构建失败RCA | researchr.org |
+|| **LogUpdater: Automated Detection and Repair of Specific Defects in Logging Statements** | Log语句自动化修复 | 检测+修复日志缺陷 | researchr.org |
+|| **Demystifying LLM-based Software Engineering Agents** | SE Agent系统性分析 | AIware 2025 Main Track | researchr.org |
+|| **Automatically Maintaining Agent Systems: How Far Are We?** | Agent自动维护 | 重要新方向 | researchr.org |
+|| **Teaching LLMs to Debug: Toward Reasoning- and Tool-Aware Coding Agents** | 调试Agent | 推理+工具感知 | researchr.org |
+
+**注**: ASE 2025 Log分析方向极为活跃（6篇相关），涵盖解析、异常检测、缺陷检测、RCA全链条。
 
 #### ASE 2024
 
